@@ -1,0 +1,9 @@
+- name: reload supervisor
+  shell: supervisorctl reload
+
+- name: reload nginx
+  shell: service nginx restart
+
+- name: reload uwsgi
+  shell: service uwsgi restart
+
