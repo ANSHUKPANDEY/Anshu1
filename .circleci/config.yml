@@ -16,7 +16,7 @@ jobs:
       - run:  
           name: Build Docker Image
           command: |
-           docker build -t appnew -f pyapp/Dockerfile .
+           docker build -t appnew -f appnew/Dockerfile .
       - run:     
           name: Create docker container
           command: |
