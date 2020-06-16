@@ -21,5 +21,3 @@ jobs:
           name: Create docker container
           command: |
            docker run -d -p 56733:80 --name=appnew appnew
-
-
