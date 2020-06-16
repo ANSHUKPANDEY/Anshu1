@@ -12,15 +12,14 @@ jobs:
             sudo apt-get update
             sudo apt install git-all
             git clone https://github.com/ANSHUKPANDEY/Anshu1.git
-            sudo pip install Flask
-            cd appnew
       - run:  
           name: Build Docker Image
           command: |
-           docker build -t appnew -f appnew/Dockerfile .
+           docker build -t anshukpandey/pythonapp:$CIRCLE_BUILD_NUM -f app/Dockerfile .
       - run:     
-          name: Create docker container
+          name: Push Image
           command: |
-           docker run -d -p 56733:80 --name=appnew appnew
+           docker login -u anshukpandey --password Wyndham02$
+           docker push anshukpandey/pythonapp:$CIRCLE_BUILD_NUM
 
 
