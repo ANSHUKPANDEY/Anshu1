@@ -12,6 +12,7 @@ jobs:
             sudo apt-get update
             sudo apt install git-all
             git clone https://github.com/ANSHUKPANDEY/Anshu1.git
+            sudo pip install Flask
             cd appnew
       - run:  
           name: Build Docker Image
