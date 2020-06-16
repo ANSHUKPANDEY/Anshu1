@@ -15,7 +15,7 @@ jobs:
       - run:  
           name: Build Docker Image
           command: |
-           docker build -t anshukpandey/pythonapp:$CIRCLE_BUILD_NUM -f app/Dockerfile .
+           docker build -t anshukpandey/pythonapp:$CIRCLE_BUILD_NUM -f Dockerfile .
       - run:     
           name: Push Image
           command: |
